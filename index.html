@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--CSS-->
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <!--NavBar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html">Contact Us</a>
+            </li>
+            
+          </ul>
+        </div>
+    </nav>
+    <!--Section 1-->
+    <div class="sectmain">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <!--Jumbotron-->
+            <div class="jumbotron">
+                <h1 class="display-4">Hello, world!</h1>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <hr class="my-4">
+                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                
+              </div>
+        </div>
+        
+        <!--Login Form-->
+        <div class="col-md-6 login-form">
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <a href="#" data-toggle="modal" data-target="#forgotpassword">Forgot Password</a><br>
+                <a href="#" data-toggle="modal" data-target="#createaccount">New User? Create Account</a><br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+      </div>
+    </div>
+    <!--Section 2-->
+    <div class="sect2">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Methodology</h2>
+
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer class="footer bg-dark">
+        <div class="container-fluid">
+          <div class="row">
+            
+            <div class="col-sm-12 col-lg-9">
+              
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+      <!--Create Account Modal-->
+      <div class="modal fade" id="createaccount" tabindex="-1" role="dialog" aria-labelledby="CreateModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="CreateModal">Register Here</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                  <div class="modalformwrapper">
+                    <form>
+                      <div class="form-group">
+                        <label for="formName">Name</label>
+                        <input type="text" class="form-control" id="formName" placeholder="Name">
+                      </div>
+                      <div class="form-group">
+                        <label for="formAge">Name</label>
+                        <input type="text" class="form-control" id="formAge" placeholder="Age">
+                      </div>
+                      <div class="form-group">
+                        <label for="formMail">EMail Id</label>
+                        <input type="text" class="form-control" id="formMail" placeholder="Mail Id">
+                      </div>
+                      <div class="form-group">
+                        <label for="formPassword">Password</label>
+                        <input type="password" class="form-control" id="formPassword" placeholder="Password">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Register</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--ForgotPassword Modal-->
+      <div class="modal fade" id="forgotpassword" tabindex="-1" role="dialog" aria-labelledby="ForgotPasswordModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="ForgotPasswordModal">Register Here</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                  <div class="modalformwrapper">
+                    <form>
+                      <div class="form-group">
+                        <label for="formMail">Email Id</label>
+                        <input type="text" class="form-control" id="formMail" placeholder="Mail Id">
+                      </div>
+                     
+                    </form>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+</div>
+ <!-- jQuery first, then Tether, then Bootstrap JS. -->
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
