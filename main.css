@@ -22,9 +22,31 @@
 }
 
 .dash1{
-    margin-top: 5em;;
+    margin-top: 5em;
+    
+    
 }
+.fbutton{
+    display: block;
+    margin-left:15em;
+    margin-top: 2em;
+}
+
+.historytable{
+    margin-top: 2em;
+}
+
 
 .news{
     text-align: center;
+}
+
+
+
+.medical{
+    text-align: center;
+}
+
+.formrow{
+    margin-top: 2em;
 }
