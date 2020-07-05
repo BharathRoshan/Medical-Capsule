@@ -1,0 +1,71 @@
+{% extends "basic.html"%}
+{% block body %}
+
+<h1 class="patih1">Patients Dashboard</h1>
+
+    <div class="formrow">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+          <form action="/upload" method="post">
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="formSurgery">Surgery/Treatment</label>
+                <input type="text" name="treatment" class="form-control" placeholder="Surgery/Treatment">
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="formSurgeryDate">Surgery Date</label>
+                <input type="date" name="date" class="form-control">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="formHospital">Hospital Name</label>
+                <input type="text" name="hname" class="form-control" placeholder="Hospital Name">
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="formSymptoms">Symptoms</label>
+                <input type="test" name="symptoms" class="form-control" placeholder="Symptoms">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="formHospital">BP</label>
+                <input type="text" name="bp" class="form-control" placeholder="120/80">
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="formSymptoms">Blood Sugar levels</label>
+                <input type="test" name="sugar" class="form-control" placeholder="100-125">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="formHospital">Weight</label>
+                <input type="text" name="weight" class="form-control" placeholder="weight">
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="formSymptoms">Doctor Name</label>
+                <input type="test" name="doc" class="form-control" placeholder="name">
+              </div>
+            </div>
+
+
+            <div class="form-row fbutton">
+              <button class="btn btn-primary upload" type="submit">Submit</button>
+            </div>
+
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+
+{% endblock %}
