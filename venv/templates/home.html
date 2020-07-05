@@ -1,0 +1,204 @@
+{% extends "basic.html"%}
+{% block body %}
+
+<!--Section 1-->
+    <div class="sectmain">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <!--Jumbotron-->
+          <div class="jumbotron">
+            <h1 class="display-4">Medical Capsule</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
+              to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+
+          </div>
+        </div>
+
+        <!--Login Form-->
+        <div class="col-md-6 login-form">
+            {% if error %}
+			<div class="alert alert-danger">
+				<h2>{{error}}</h2>
+			</div>
+		    {% endif %}
+
+            {% if not userName %}
+
+          <form action="/" method="post">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" name="pass" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <a href="#" data-toggle="modal" data-target="#forgotpassword">Forgot Password</a><br>
+            <a href="#" data-toggle="modal" data-target="#createaccount">New User? Create Account</a><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+            {% endif %}
+
+
+        </div>
+      </div>
+    </div>
+    <!--Section 2-->
+    <div class="sect2">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Methodology</h2>
+
+        </div>
+      </div>
+    </div>
+    <!--Footer-->
+    <footer class="footer bg-dark">
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-sm-12 col-lg-9">
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--Create Account Modal-->
+    <div class="modal fade" id="createaccount" tabindex="-1" role="dialog" aria-labelledby="CreateModal"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="CreateModal">Register Here</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="modalformwrapper">
+                    <form action="/" method="post">
+                      <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                          <label>Name</label>
+                          <input type="text" name="name" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label>Age</label>
+                          <input type="text" name="age" class="form-control" placeholder="Age">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                          <label>Email Id</label>
+                          <input type="text" name="email" class="form-control" placeholder="Mail Id">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label>Password</label>
+                          <input type="password" name="pass" class="form-control" placeholder="Password">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                          <label>Date of Birth</label>
+                          <input type="date" name="dob" class="form-control" placeholder="Date of Birth">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label>Aadhaar Number</label>
+                          <input type="text" name="aadhar" class="form-control" placeholder="Aadhaar Number">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                          <label>City</label>
+                          <input type="text" name="city" class="form-control" placeholder="City">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label>State</label>
+                          <input type="text" name="state" class="form-control" placeholder="State">
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                          <label>Pin Code</label>
+                          <input type="text" name="pin" class="form-control" placeholder="Pin Code">
+                        </div>
+
+                      </div>
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                      </div>
+
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ForgotPassword Modal-->
+  <div class="modal fade" id="forgotpassword" tabindex="-1" role="dialog" aria-labelledby="ForgotPasswordModal"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ForgotPasswordModal">Register Here</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="modalformwrapper">
+                  <form>
+                    <div class="form-group">
+                      <label for="formMail">Email Id</label>
+                      <input type="text" class="form-control" id="formMail" placeholder="Mail Id">
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+{% endblock %}
