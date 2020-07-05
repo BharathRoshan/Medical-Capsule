@@ -10,18 +10,32 @@
             <thead>
               <tr>
                 <th scope="col">Sl.No</th>
-                <th scope="col">Diagnosis</th>
-                <th scope="col">File Name</th>
-                <th scope="col">Upload Date</th>
+                <th scope="col">Surgery / Treatment</th>
+                <th scope="col">Surgery Date</th>
+                <th scope="col">Hospital Name</th>
+                <th scope="col">Symptoms</th>
+                <th scope="col">Blood Pressure</th>
+                <th scope="col">Blood Sugar Level</th>
+                <th scope="col">Weight</th>
+                <th scope="col">Doctor Name</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Cancer</td>
-                <td></td>
-                <td></td>
-              </tr>
+
+                {% for record in data[1:] %}
+                  <tr>
+                <th scope="row">{{ loop.index0+1 }}</th>
+                <td>{{ record['treatment'] }}</td>
+                <td>{{ record['date'] }}</td>
+                <td>{{ record['hname'] }}</td>
+                <td>{{ record['symptoms'] }}</td>
+                <td>{{ record['bp'] }}</td>
+                <td>{{ record['sugar'] }}</td>
+                <td>{{ record['weight'] }}</td>
+                <td>{{ record['docName'] }}</td>
+                       </tr>
+                {% endfor %}
+
 
             </tbody>
           </table>
@@ -44,13 +58,6 @@
       </div>
     </div>
     <hr>
-    <div class="newsfeeds">
-      <div class="row">
-        <div class="col-md-12">
-          <h4 class="news">News Feeds</h4>
-        </div>
-      </div>
-    </div>
   </div>
 
 

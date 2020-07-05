@@ -170,9 +170,27 @@ def upload():
 
 @app.route('/history')
 def history():
+    time.sleep(2)
     fbUserName = db.child("users").child(firebaseUser['localId']).get().val()["name"]
 
-    return render_template('history.html', userName=fbUserName)
+    # user=>id=>history=>get
+
+    history = db.child("users").child(firebaseUser['localId']).child("history").get()
+
+    #print(dict(history.val()))
+    historyData = [fbUserName]
+
+    if history is not None:
+
+        for val in dict(history.val()).values():
+            historyData.append(val)
+        print(historyData)
+
+        return render_template('history.html', data=historyData)
+    else:
+        return render_template('history.html', data=historyData)
+
+
 
 
 app.run(debug=True)

@@ -35,7 +35,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/contactus">Contact Us</a>
             </li>
-              {% if userName %}
+              {% if userName or data %}
 
             <li class="nav-item">
               <a class="nav-link" href="/upload">Upload</a>
@@ -44,10 +44,19 @@
             <li class="nav-item">
               <a class="nav-link" href="/history">History</a>
             </li>
+            {% if userName %}
 
             <li class="nav-item active">
               <a class="nav-link">{{userName}}<span class="sr-only">(current)</span></a>
             </li>
+            {% endif %}
+
+            {% if data %}
+
+            <li class="nav-item active">
+              <a class="nav-link">{{data[0]}}<span class="sr-only">(current)</span></a>
+            </li>
+            {% endif %}
               {% endif %}
 
           </ul>
